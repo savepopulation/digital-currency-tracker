@@ -20,9 +20,22 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    supportLibraryVersion = '26.0.1'
+    retrofitVersion = '2.3.0'
+    loggingInterceptorVersion = '3.8.0'
+    archVersion = '1.0.0-alpha8'
+    daggerVersion = '2.11'
+    gsonVersion = '2.0.2'
+    rxKotlinVersion = '2.1.0'
+    dataBindingCompilerVersion = '2.3.1'
+}
+

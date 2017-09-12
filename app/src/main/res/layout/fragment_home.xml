@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.raqun.dctracker.model.UiDataBean" />
+
+        <import type="com.raqun.dctracker.model.Diff" />
+
+        <import type="java.util.List" />
+
+        <variable
+            name="diffBean"
+            type="UiDataBean&lt;List&lt;Diff&gt;&gt;" />
+
+    </data>
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/diffs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</layout>
