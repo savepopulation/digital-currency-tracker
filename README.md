@@ -1,7 +1,7 @@
 # dc-tracker
 Digital Currency tracker application<br>
 
-## An example implementation of latest Android Trends with KOTLIN
+## An example implementation of latest Android Trends with Kotlin
 - MVVM
 - Dagger 2.11
 - Data Binding
