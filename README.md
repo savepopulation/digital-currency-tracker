@@ -15,6 +15,7 @@ Digital Currency tracker application<br>
 - Clean Arch.
 - Dao 
 - Realm
+- Espresso
 
 <br>
 <b>Project is opened for contribution and reviews.</b>
