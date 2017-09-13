@@ -16,4 +16,5 @@ Digital Currency tracker application<br>
 - Dao 
 - Realm
 
-<b>Project's opened for contribution and reviews.</b>
+<br>
+<b>Project is opened for contribution and reviews.</b>
