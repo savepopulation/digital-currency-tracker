@@ -11,9 +11,9 @@ Digital Currency tracker application<br>
 - RxKotlin
 - Repository
 
-## Can be implemented in future
+##  Can be implemented in future
 - Persistancy
 - Dao 
 - Realm
 
-It's opened for contribution and reviews.
+<b>Project's opened for contribution and reviews.</b>
