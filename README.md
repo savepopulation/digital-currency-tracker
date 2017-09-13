@@ -12,7 +12,7 @@ Digital Currency tracker application<br>
 - Repository
 
 ##  Can be implemented in future
-- Persistancy
+- Clean Arch.
 - Dao 
 - Realm
 
