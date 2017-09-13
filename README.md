@@ -13,7 +13,7 @@ Digital Currency tracker application<br>
 
 ##  Can be implemented in future
 - Clean Arch.
-- Dao 
+- Room 
 - Realm
 - Espresso
 
