@@ -3,7 +3,7 @@
 
     <data>
 
-        <import type="com.raqun.dctracker.model.UiDataBean" />
+        <import type="com.raqun.dctracker.data.DataBean" />
 
         <import type="com.raqun.dctracker.model.Diff" />
 
@@ -11,7 +11,7 @@
 
         <variable
             name="diffBean"
-            type="UiDataBean&lt;List&lt;Diff&gt;&gt;" />
+            type="DataBean&lt;List&lt;Diff&gt;&gt;" />
 
     </data>
 

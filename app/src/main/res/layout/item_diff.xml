@@ -17,12 +17,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{diff.currency}" />
+            android:text="@{diff.name}" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(diff.value)}" />
+            android:text="@{String.valueOf(diff.buyRate)}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(diff.sellRate)}" />
 
     </LinearLayout>
 

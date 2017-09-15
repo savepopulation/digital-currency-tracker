@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.raqun.dctracker.R
+import com.raqun.dctracker.data.DataBean
 import com.raqun.dctracker.databinding.FragmentHomeBinding
 import com.raqun.dctracker.model.Diff
 import com.raqun.dctracker.model.UiDataBean
@@ -41,7 +42,7 @@ class HomeFragment : BinderFragment<FragmentHomeBinding, HomeViewModel>() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel.getDiffsLiveData().observe(this, Observer {
-            bean: UiDataBean<List<Diff>>? ->
+            bean: DataBean<List<Diff>>? ->
             bean?.let {
                 binding.diffBean = bean
             }

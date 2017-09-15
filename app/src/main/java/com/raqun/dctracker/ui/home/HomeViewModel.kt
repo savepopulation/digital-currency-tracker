@@ -2,6 +2,7 @@ package com.raqun.dctracker.ui.home
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
+import com.raqun.dctracker.data.DataBean
 import com.raqun.dctracker.data.source.remote.DiffRemoteDataSource
 import com.raqun.dctracker.model.Diff
 import com.raqun.dctracker.model.UiDataBean
@@ -16,7 +17,7 @@ import com.raqun.dctracker.data.Error
 class HomeViewModel @Inject constructor(private val diffRemoteDataSource: DiffRemoteDataSource)
     : ViewModel() {
 
-    private val diffsLiveData = MutableLiveData<UiDataBean<List<Diff>>>()
+    private val diffsLiveData = MutableLiveData<DataBean<List<Diff>>>()
 
     init {
         getDiffs()

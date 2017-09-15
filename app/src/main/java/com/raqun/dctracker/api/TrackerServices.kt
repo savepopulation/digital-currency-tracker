@@ -12,6 +12,6 @@ import retrofit2.http.POST
  * Created by tyln on 12/09/2017.
  */
 interface TrackerServices {
-    @GET("Ether")
+    @GET("money")
     fun getDiffs(): Single<List<Diff>>
 }
