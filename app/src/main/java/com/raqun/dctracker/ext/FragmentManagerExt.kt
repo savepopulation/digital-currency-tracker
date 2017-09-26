@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentTransaction
 /**
  * Created by tyln on 26/09/2017.
  */
-inline fun FragmentManager.transact(func: FragmentTransaction.() -> FragmentTransaction) {
+inline fun FragmentManager.navigate(func: FragmentTransaction.() -> FragmentTransaction) {
     beginTransaction().func().commit()
 }
 

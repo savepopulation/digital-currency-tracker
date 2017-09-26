@@ -9,6 +9,7 @@ import android.view.View
 import com.raqun.dctracker.R
 import com.raqun.dctracker.data.DataBean
 import com.raqun.dctracker.databinding.FragmentHomeBinding
+import com.raqun.dctracker.ext.setup
 import com.raqun.dctracker.model.Diff
 import com.raqun.dctracker.model.UiDataBean
 import com.raqun.dctracker.ui.BinderFragment
@@ -16,13 +17,6 @@ import com.raqun.dctracker.ui.BinderFragment
 /**
  * Created by tyln on 12/09/2017.
  */
-
-fun RecyclerView.setup(context: Context) {
-    val layoutManager = LinearLayoutManager(context)
-    layoutManager.orientation = LinearLayoutManager.HORIZONTAL
-    this.layoutManager = layoutManager
-    this.setHasFixedSize(true)
-}
 
 class HomeFragment : BinderFragment<FragmentHomeBinding, HomeViewModel>() {
 
