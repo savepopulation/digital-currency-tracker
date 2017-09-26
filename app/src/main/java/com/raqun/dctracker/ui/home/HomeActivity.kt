@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.annotation.LayoutRes
 import com.raqun.dctracker.R
+import com.raqun.dctracker.ext.init
 import com.raqun.dctracker.ui.BaseActivity
 
 /**
@@ -16,14 +17,8 @@ class HomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (savedInstanceState == null) {
-            // TODO fix this impl
-            supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.framelayout_main, HomeFragment.newInstance())
-                    .commit()
 
-        }
+        init(savedInstanceState, HomeFragment.newInstance())
     }
 
     override fun getNavigationType(): Int = NAV_TYPE_ROOT
