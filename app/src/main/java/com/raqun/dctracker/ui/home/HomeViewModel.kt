@@ -10,6 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 import com.raqun.dctracker.data.Error
+import io.reactivex.rxkotlin.subscribeBy
 
 /**
  * Created by tyln on 12/09/2017.
@@ -27,17 +28,11 @@ class HomeViewModel @Inject constructor(private val diffRemoteDataSource: DiffRe
 
     private fun getDiffs() {
         diffsLiveData.value = UiDataBean.fetching(null)
-
-        // TODO fix rx impl
         diffRemoteDataSource.getDiffs()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({
-                    diffs: List<Diff> ->
-                    diffsLiveData.value = UiDataBean.success(diffs)
-                }, {
-                    e: Throwable ->
-                    diffsLiveData.value = UiDataBean.error(null, Error(0, e.localizedMessage))
-                })
+                .subscribeBy(
+                        onSuccess = { diffsLiveData.value = UiDataBean.success(it) },
+                        onError = { diffsLiveData.value = UiDataBean.error(null, Error(0, it.localizedMessage)) })
     }
 }
