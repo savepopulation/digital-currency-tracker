@@ -20,18 +20,9 @@ import com.raqun.dctracker.ui.BinderFragment
 
 class HomeFragment : BinderFragment<FragmentHomeBinding, HomeViewModel>() {
 
-    private var recyclerViewDiff: RecyclerView? = null
-
     override fun getModelClass() = HomeViewModel::class.java
 
     override fun getLayoutRes() = R.layout.fragment_home
-
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        recyclerViewDiff = view?.findViewById<RecyclerView>(R.id.diffs)?.apply {
-            setup(context)
-        }
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -41,6 +32,10 @@ class HomeFragment : BinderFragment<FragmentHomeBinding, HomeViewModel>() {
                 binding.diffBean = bean
             }
         })
+    }
+
+    override fun initView() {
+        binding.diffs.setup(activity)
     }
 
     companion object {
