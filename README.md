@@ -1,4 +1,4 @@
-# dc-tracker
+# digital-currency-tracker
 Digital Currency tracker application<br>
 
 ## An example implementation of latest Android Trends with Kotlin
@@ -16,6 +16,3 @@ Digital Currency tracker application<br>
 - Room 
 - Realm
 - Espresso
-
-<br>
-<b>Project is opened for contribution and reviews.</b>
